@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alley Run – Escape the Bulls</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐂</text></svg>">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="gameCanvas" width="900" height="500"></canvas>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+      <h1>ALLEY RUN</h1>
+      <p class="subtitle">Escape the charging bulls through the narrow alleys</p>
+      <div class="instructions">
+        <p><strong>Controls</strong></p>
+        <p>← → or A D &nbsp; Move left / right</p>
+        <p>SPACE or ↑ &nbsp; Jump</p>
+        <p>Reach the end of each alley to advance</p>
+      </div>
+      <button id="start-btn" class="btn">START RUN</button>
+      <p class="credit">Inspired by the running of the bulls • Made for GitHub</p>
+    </div>
+
+    <!-- Level Complete Screen -->
+    <div id="level-complete-screen" class="screen hidden">
+      <h2>YOU MADE IT!</h2>
+      <p id="level-complete-text">Level 1 Complete</p>
+      <p id="level-score"></p>
+      <button id="next-level-btn" class="btn">NEXT ALLEY</button>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+      <h2>GORED!</h2>
+      <p id="game-over-text">The bull caught you</p>
+      <p id="final-score"></p>
+      <button id="retry-btn" class="btn">TRY AGAIN</button>
+      <button id="menu-btn" class="btn btn-secondary">MAIN MENU</button>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+      <div id="level-display">Alley 1</div>
+      <div id="distance-display">0 m</div>
+      <div id="lives-display">♥ ♥ ♥</div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
